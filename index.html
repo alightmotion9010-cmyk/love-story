@@ -1,330 +1,366 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Cinta Untukmu ❤️</title>
 
-<meta charset="UTF-8">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<title>Surat Untukmu ❤️</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!--========================
+<!-- ==========================
+BACKGROUND MUSIC
+=========================== -->
+
+<audio id="bgMusic" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ==========================
+FALLING LEAVES
+=========================== -->
+
+<div id="leaf-left"></div>
+<div id="leaf-right"></div>
+
+<!-- ==========================
+CURSOR GLOW
+=========================== -->
+
+<div class="cursor"></div>
+
+<!-- ==========================
 LOADING
-=========================-->
+=========================== -->
 
 <div id="loading">
 
-<div class="loader-heart"></div>
+    <div class="loader-heart">❤️</div>
 
-<p>Memuat Kenangan...</p>
+    <p>Memuat Kenangan...</p>
 
 </div>
 
-<!--========================
-MUSIC
-=========================-->
-
-<audio id="bgMusic" loop>
-
-<source src="lagu.mp3" type="audio/mpeg">
-
-</audio>
-
-<!--========================
-LEAVES
-=========================-->
-
-<div id="leaves-left"></div>
-
-<div id="leaves-right"></div>
-
-<!--========================
+<!-- ==========================
 HOME
-=========================-->
+=========================== -->
 
-<section class="hero">
+<section id="home" class="hero">
 
-<div class="overlay"></div>
+    <div class="overlay"></div>
 
-<div class="hero-content">
+    <div class="hero-content">
 
-<div class="heart">
+        <div class="love">
 
-<i class="fa-solid fa-heart"></i>
+            ❤️
 
-</div>
+        </div>
 
-<h1>
+        <h1>
 
-Untuk Seseorang Yang Sangat Berharga
+            Untuk Seseorang Yang Sangat Berharga
 
-</h1>
+        </h1>
 
-<p>
+        <p>
 
-Ada sebuah surat kecil...
+            Ada sebuah surat kecil...
 
-yang hanya bisa dibuka oleh seseorang
-yang sangat berarti.
+            yang hanya pantas dibaca oleh seseorang
 
-</p>
+            yang sangat berarti.
 
-<button id="enterBtn">
+        </p>
 
-Masuk
+        <button id="enterBtn">
 
-</button>
+            Masuk
 
-</div>
+        </button>
 
-</section>
-
-<!--========================
-OPENING
-=========================-->
-
-<section class="opening hidden">
-
-<div class="glass">
-
-<h2>
-
-Selamat Datang
-
-</h2>
-
-<p>
-
-Terima kasih telah meluangkan sedikit waktumu
-untuk membuka halaman sederhana ini.
-
-Semoga setiap kalimat yang tertulis
-mampu menyampaikan sesuatu
-yang selama ini sulit diungkapkan.
-
-</p>
-
-</div>
+    </div>
 
 </section>
 
-<!--========================
-PHOTO 1
-=========================-->
+<!-- ==========================
+PEMBUKA
+=========================== -->
 
-<section class="photo-section">
+<section id="opening" class="section hidden">
 
-<h2>
+    <div class="glass">
 
-Kenangan Pertama
+        <h2>
 
-</h2>
+            Selamat Datang
 
-<div class="photo-box">
+        </h2>
 
-<img src="foto1.jpg">
+        <p>
 
-<div class="caption">
+            Terima kasih telah membuka halaman ini.
 
-<p>
+            Semoga setiap kata yang tertulis
 
-Semua cerita indah
-selalu memiliki satu kesamaan.
+            mampu menjadi kenangan
 
-Di dalamnya selalu ada kamu.
+            yang indah untukmu.
 
-</p>
+        </p>
 
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!--========================
-MESSAGE
-=========================-->
+<!-- ==========================
+FOTO 1
+=========================== -->
 
-<section class="message">
+<section id="photo1" class="section hidden">
 
-<div class="glass">
+    <div class="title">
 
-<h2>
+        <h2>
 
-Sebuah Harapan
+            Kenangan Pertama
 
-</h2>
+        </h2>
 
-<p>
+    </div>
 
-Semoga setiap langkahmu
-dipenuhi kebahagiaan.
+    <div class="photo-card">
 
-Semoga senyummu
-tidak pernah hilang.
+        <img src="foto1.jpg" alt="Foto Pertama">
 
-Dan semoga...
-aku selalu menjadi salah satu alasan
-mengapa kamu tersenyum.
+        <div class="photo-text">
 
-</p>
+            <p>
 
-</div>
+                Semua cerita indah
 
-</section>
+                selalu memiliki satu kesamaan.
 
-<!--========================
-PHOTO 2
-=========================-->
+                Di dalamnya ada kamu.
 
-<section class="photo-section">
+            </p>
 
-<h2>
+        </div>
 
-Kenangan Yang Tak Terlupakan
-
-</h2>
-
-<div class="photo-box">
-
-<img src="foto2.jpg">
-
-<div class="caption">
-
-<p>
-
-Tidak semua kenangan
-bisa diulang.
-
-Namun semuanya
-akan selalu dikenang.
-
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!--========================
-LAST MESSAGE
-=========================-->
+<!-- ==========================
+PESAN
+=========================== -->
 
-<section class="last">
+<section id="message" class="section hidden">
 
-<div class="glass">
+    <div class="glass">
 
-<h2>
+        <h2>
 
-Terima Kasih
+            Sebuah Harapan
 
-</h2>
+        </h2>
 
-<p>
+        <p>
 
-Terima kasih
-telah menjadi bagian
-dari cerita kecil ini.
+            Semoga langkahmu
 
-</p>
+            selalu dipenuhi kebahagiaan.
 
-<button id="letterBtn">
+            Semoga senyummu
 
-💌 Buka Surat
+            tidak pernah hilang.
 
-</button>
+        </p>
 
-</div>
+    </div>
 
 </section>
-<!--====================================
+<!-- ==========================
+FOTO 2
+=========================== -->
+
+<section id="photo2" class="section hidden">
+
+    <div class="title">
+
+        <h2>Kenangan Yang Tak Terlupakan</h2>
+
+    </div>
+
+    <div class="photo-card">
+
+        <img src="foto2.jpg" alt="Foto Kedua">
+
+        <div class="photo-text">
+
+            <p>
+
+                Tidak semua kenangan bisa diulang.
+
+                Namun setiap kenangan bersamamu
+
+                akan selalu tersimpan di dalam hati.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PESAN TERAKHIR
+=========================== -->
+
+<section id="lastMessage" class="section hidden">
+
+    <div class="glass">
+
+        <h2>Terima Kasih</h2>
+
+        <p>
+
+            Terima kasih telah menjadi bagian
+
+            dari cerita sederhana ini.
+
+            Semoga halaman kecil ini
+
+            mampu menjadi kenangan
+
+            yang selalu membuatmu tersenyum.
+
+        </p>
+
+        <button id="openLetter">
+
+            💌 Buka Surat
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
 POPUP SURAT
-=====================================-->
+=========================== -->
 
 <div id="letterPopup" class="popup">
 
-    <div class="popup-content">
+    <div class="popup-box">
 
-        <button id="closeLetter" class="close-letter">
-            ✕
+        <button id="closeLetter">
+
+            ✖
+
         </button>
 
-        <h2>💌 Surat Untukmu</h2>
+        <h2>
 
-        <div class="letter-body">
+            Surat Untukmu ❤️
 
-            <p>Hai...</p>
+        </h2>
+
+        <div class="letter">
 
             <p>
-                Terima kasih telah membuka halaman ini.
+
+                Hai...
+
             </p>
 
             <p>
+
+                Terima kasih telah meluangkan waktumu
+
+                untuk membuka halaman ini.
+
+            </p>
+
+            <p>
+
                 Mungkin website ini sederhana,
-                namun setiap kata yang tertulis di sini
-                dibuat dengan penuh ketulusan.
+
+                tetapi setiap kata di dalamnya
+
+                ditulis dengan penuh ketulusan.
+
             </p>
 
             <p>
-                Terima kasih telah menjadi bagian
-                dari cerita indah yang pernah ada.
+
+                Aku hanya ingin kamu tahu,
+
+                bahwa kehadiranmu
+
+                adalah salah satu hal
+
+                terindah yang pernah hadir
+
+                dalam perjalanan hidupku.
+
             </p>
 
             <p>
-                Semoga setiap langkahmu dipenuhi
-                kebahagiaan.
+
+                Semoga kamu selalu bahagia.
+
+                Semoga semua impianmu tercapai.
+
+                Semoga setiap harimu
+
+                dipenuhi senyuman.
+
             </p>
 
             <p>
-                Semoga semua impianmu menjadi nyata.
-            </p>
 
-            <p>
-                Tetaplah menjadi pribadi
-                yang selalu membawa senyum
-                bagi orang-orang di sekitarmu.
-            </p>
+                Dan jika suatu saat nanti
 
-            <p>
-                Jika suatu hari nanti
                 kita mengenang semuanya,
+
                 semoga halaman kecil ini
+
                 masih mampu membuatmu tersenyum.
+
             </p>
 
-            <h3>
+            <div class="signature">
+
                 ❤️ Dengan Tulus ❤️
-            </h3>
 
-            <span class="creator">
+                <br><br>
 
-                — Nama Kamu —
+                <strong>Nama Kamu</strong>
 
-            </span>
+            </div>
 
         </div>
 
     </div>
 
 </div>
-
-<!--====================================
+<!-- ==========================
 PENUTUP
-=====================================-->
+=========================== -->
 
-<section class="ending">
+<section id="ending" class="section hidden">
 
     <div class="glass">
 
@@ -338,7 +374,8 @@ PENUTUP
 
             Walaupun halaman ini telah berakhir,
 
-            semoga kisah kita
+            semoga kisah indah kita
+
             tidak pernah benar-benar selesai.
 
         </p>
@@ -353,33 +390,33 @@ PENUTUP
 
 </section>
 
-<!--====================================
+<!-- ==========================
 FINAL SCREEN
-=====================================-->
+=========================== -->
 
-<section id="finalPage">
+<section id="finalScreen">
 
-    <div class="final-container">
+    <div class="final-content">
 
-        <h1 class="final-text text1">
+        <h1 class="final-text">
 
             Terima Kasih ❤️
 
         </h1>
 
-        <h1 class="final-text text2">
+        <h1 class="final-text">
 
             Semoga Bahagia 🌸
 
         </h1>
 
-        <h1 class="final-text text3">
+        <h1 class="final-text">
 
             Jaga Dirimu 😊
 
         </h1>
 
-        <h1 class="final-text text4">
+        <h1 class="final-text">
 
             Sampai Bertemu Lagi ✨
 
@@ -389,25 +426,19 @@ FINAL SCREEN
 
 </section>
 
-<!--====================================
-CURSOR GLOW
-=====================================-->
-
-<div class="cursor-glow"></div>
-
-<!--====================================
-SCROLL TOP
-=====================================-->
+<!-- ==========================
+SCROLL TO TOP
+=========================== -->
 
 <button id="scrollTop">
 
-    ↑
+    ⬆
 
 </button>
 
-<!--====================================
+<!-- ==========================
 SCRIPT
-=====================================-->
+=========================== -->
 
 <script src="script.js"></script>
 
