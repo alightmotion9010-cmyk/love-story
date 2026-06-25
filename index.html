@@ -1,1 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Surat Cinta ❤️</title>
 
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+    background:#111;
+}
+
+
+/* halaman awal */
+
+.cover{
+    height:100vh;
+    background:url("background website.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+
+.love{
+    font-size:100px;
+    animation:beat 1s infinite;
+}
+
+
+@keyframes beat{
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+
+button{
+
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    background:#ff3366;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.1);
+    background:#ff0033;
+
+}
+
+
+/* isi */
+
+section{
+
+    min-height:100vh;
+    padding:60px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+
+}
+
+
+/* daun jatuh */
+
+.leaf{
+
+position:fixed;
+top:-10px;
+font-size:25px;
+animation:fall linear infinite;
+color:red;
+
+}
+
+
+@keyframes fall{
+
+to{
+transform:translateY(110vh) rotate(360deg);
+}
+
+}
+
+
+
+.foto{
+
+width:300px;
+border-radius:20px;
+box-shadow:0 0 30px black;
+animation:muncul 2s;
+
+}
+
+
+@keyframes muncul{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+}
+
+}
+
+
+/* background foto */
+
+.foto1{
+
+background:url("background foto1.jpg");
+background-size:cover;
+
+}
+
+
+
+.foto2{
+
+background:url("background foto2.jpg");
+background-size:cover;
+
+}
+
+
+
+.pesan{
+
+background:rgba(0,0,0,.5);
+padding:30px;
+border-radius:20px;
+max-width:600px;
+
+}
+
+
+/* surat */
+
+.surat{
+
+background:url("background surat akhir.jpg");
+background-size:cover;
+
+}
+
+
+#isiSurat{
+
+display:none;
+
+}
+
+
+.nama{
+
+margin-top:20px;
+font-size:25px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<div class="cover">
+
+
+<div>
+
+
+<div class="love">
+❤️
+</div>
+
+
+<h1>
+Surat Untuk Kamu
+</h1>
+
+
+<p>
+Ada sesuatu yang ingin aku sampaikan...
+</p>
+
+
+<br>
+
+<button onclick="mulai()">
+Masuk ❤️
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<audio id="musik" loop>
+
+<source src="lagump3.mp3">
+
+</audio>
+
+
+
+<!-- daun -->
+
+<script>
+
+function daun(){
+
+let d=document.createElement("div");
+
+d.className="leaf";
+
+d.innerHTML="🍂";
+
+d.style.left=Math.random()*100+"%";
+
+d.style.animationDuration=
+(3+Math.random()*5)+"s";
+
+document.body.appendChild(d);
+
+
+setTimeout(()=>{
+
+d.remove();
+
+},8000);
+
+
+}
+
+
+setInterval(daun,300);
+
+
+
+function mulai(){
+
+document.getElementById("musik").play();
+
+window.scrollTo({
+
+top:window.innerHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+
+function bukaSurat(){
+
+document.getElementById("isiSurat").style.display="block";
+
+}
+
+
+</script>
+
+
+
+
+
+<section>
+
+
+<h1>
+Untuk Kamu ❤️
+</h1>
+
+
+<div class="pesan">
+
+<p>
+Terima kasih sudah menjadi seseorang yang berarti.
+Semoga halaman kecil ini bisa membuat kamu tersenyum.
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="foto1">
+
+
+<h1>
+Foto Pertama
+</h1>
+
+
+<img src="foto1.jpg" class="foto">
+
+
+<div class="pesan">
+
+<p>
+Kenangan pertama yang selalu aku ingat.
+Semoga momen ini tidak pernah terlupakan.
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h1>
+Sebuah Pesan
+</h1>
+
+
+<div class="pesan">
+
+
+<p>
+
+Aku tidak tahu bagaimana menjelaskan semuanya,
+tapi kamu adalah seseorang yang spesial.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="foto2">
+
+
+<h1>
+Foto Kedua
+</h1>
+
+
+<img src="foto2.jpg" class="foto">
+
+
+<div class="pesan">
+
+<p>
+Foto kedua yang menyimpan cerita indah.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="surat">
+
+
+<h1>
+Surat Terakhir 💌
+</h1>
+
+
+<button onclick="bukaSurat()">
+
+Buka Surat
+
+</button>
+
+
+
+<div id="isiSurat" class="pesan">
+
+
+<p>
+
+Aku berharap kamu selalu bahagia.
+Terima kasih sudah hadir dan membuat hari menjadi lebih indah.
+
+<br><br>
+
+
+Dengan penuh kasih,
+
+</p>
+
+
+
+<div class="nama">
+
+Yunda ❤️
+
+</div>
+
+
+<br>
+
+
+<button onclick="document.getElementById('isiSurat').style.display='none'">
+
+Tutup Pesan
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h1>
+Penutup 🍂
+</h1>
+
+
+<p>
+
+Semoga cerita kecil ini selalu kamu ingat.
+
+</p>
+
+
+
+<button onclick="alert('Terima kasih sudah membaca ❤️')">
+
+Tutup Website
+
+</button>
+
+
+</section>
+
+
+
+</body>
+
+</html>
