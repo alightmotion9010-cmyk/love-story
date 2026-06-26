@@ -597,12 +597,6 @@ function animateParticles() {
 }
 window.addEventListener('resize',()=>{ if(document.getElementById('gugur-overlay').classList.contains('show')) drawTree(); });
 
-/* Tutup panel kalau klik di luar */
-document.addEventListener('click', e => {
-  const panel = document.getElementById('font-panel');
-  const btn   = document.getElementById('font-picker-btn');
-  if (panel.classList.contains('open') && !panel.contains(e.target) && e.target !== btn) {
-    panel.classList.remove('open');
   }
 });
 </script>
