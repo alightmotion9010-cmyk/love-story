@@ -32,41 +32,6 @@
       overflow-x: hidden;
     }
 
-    /* ══════════════════════════════════
-       FONT PICKER PANEL
-    
-
-    .font-row {
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-    }
-    .font-row label {
-      font-family: var(--FONT_ISI);
-      font-size: .78rem;
-      color: var(--blush);
-      letter-spacing: .05em;
-      text-transform: uppercase;
-    }
-    .font-row select {
-      width: 100%;
-      padding: .5rem .8rem;
-      border-radius: 8px;
-      border: 1px solid rgba(201,169,110,.3);
-      background: rgba(30,5,15,.8);
-      color: var(--cream);
-      font-size: .95rem;
-      cursor: pointer;
-      outline: none;
-      transition: border-color .3s ease;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a96e' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right .8rem center;
-      padding-right: 2rem;
-    }
-    .font-row select:hover,
-    .font-row select:focus { border-color: var(--gold); }
 
     /* preview teks kecil di bawah select */
     .font-preview {
@@ -391,54 +356,6 @@
 
 <audio id="bg-audio" loop><source src="lagu.mp3" type="audio/mpeg"/></audio>
 
-<!-- ══ FONT PICKER ══ -->
-<button id="font-picker-btn" onclick="togglePanel()" title="Ganti Font">🔤</button>
-
-<div id="font-panel">
-  <h4>🎨 Pilih Font</h4>
-
-  <div class="font-row">
-    <label>Font Judul & Tombol</label>
-    <select id="sel-judul" onchange="gantiFont('judul', this.value)">
-      <option value="Dancing Script">Dancing Script ✦ (bawaan)</option>
-      <option value="Great Vibes">Great Vibes</option>
-      <option value="Sacramento">Sacramento</option>
-      <option value="Parisienne">Parisienne</option>
-      <option value="Pinyon Script">Pinyon Script</option>
-      <option value="Satisfy">Satisfy</option>
-    </select>
-    <div class="font-preview" id="prev-judul" style="font-family:'Dancing Script',cursive">Untuk Kamu ❤️</div>
-  </div>
-
-  <div class="font-row">
-    <label>Font Isi Pesan & Teks</label>
-    <select id="sel-isi" onchange="gantiFont('isi', this.value)">
-      <option value="Cormorant Garamond">Cormorant Garamond ✦ (bawaan)</option>
-      <option value="Lora">Lora</option>
-      <option value="EB Garamond">EB Garamond</option>
-      <option value="Libre Baskerville">Libre Baskerville</option>
-      <option value="Crimson Text">Crimson Text</option>
-      <option value="Raleway">Raleway</option>
-      <option value="Montserrat">Montserrat</option>
-      <option value="Josefin Sans">Josefin Sans</option>
-    </select>
-    <div class="font-preview" id="prev-isi" style="font-family:'Cormorant Garamond',serif">Perasaan ini nyata untukmu...</div>
-  </div>
-
-  <div class="font-row">
-    <label>Font Efek Dimensi</label>
-    <select id="sel-aksen" onchange="gantiFont('aksen', this.value)">
-      <option value="Playfair Display">Playfair Display ✦ (bawaan)</option>
-      <option value="Great Vibes">Great Vibes</option>
-      <option value="Lora">Lora</option>
-      <option value="EB Garamond">EB Garamond</option>
-      <option value="Libre Baskerville">Libre Baskerville</option>
-    </select>
-    <div class="font-preview" id="prev-aksen" style="font-family:'Playfair Display',serif;font-style:italic">✦ Dari Dunia yang Lain ✦</div>
-  </div>
-
-  <p class="panel-note">Perubahan font langsung terlihat di semua teks website 🌸</p>
-</div>
 
 <!-- ══ LANDING ══ -->
 <div id="landing">
