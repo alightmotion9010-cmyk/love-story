@@ -6,18 +6,12 @@
   <title>Untuk Kamu ❤️</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <!-- Font awal dimuat -->
-  <link id="google-fonts-link" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Sacramento&family=Parisienne&family=Satisfy&family=Lora:ital,wght@0,400;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Libre+Baskerville:ital,wght@0,400;1,400&family=Crimson+Text:ital,wght@0,400;1,400&family=Pinyon+Script&family=Raleway:wght@300;400&family=Montserrat:wght@300;400&family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet"/>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
 
     :root {
-      --FONT_JUDUL : 'Dancing Script', cursive;
-      --FONT_ISI   : 'Libre Baskerville', serif;
-      --FONT_AKSEN : 'Playfair Display', serif;
-
       --rose      : #c0392b;
       --rose-soft : #e57373;
       --blush     : #f8bbd0;
@@ -26,35 +20,13 @@
     }
 
     body {
-      font-family: var(--FONT_ISI);
+      font-family: var(--FONT_ISI, serif);
       background: #0a0005;
       color: var(--cream);
       overflow-x: hidden;
     }
 
-
-    /* preview teks kecil di bawah select */
-    .font-preview {
-      font-size: 1rem;
-      color: #e8b4c8;
-      text-align: center;
-      padding: .25rem 0;
-      min-height: 1.5rem;
-      transition: font-family .4s ease;
-    }
-
-    .panel-note {
-      font-size: .72rem;
-      color: rgba(248,187,208,.5);
-      text-align: center;
-      line-height: 1.5;
-      border-top: 1px solid rgba(201,169,110,.15);
-      padding-top: .6rem;
-    }
-
-    /* ══════════════════════════════════
-       LANDING
-    ══════════════════════════════════ */
+    /* LANDING */
     #landing {
       position: fixed; inset: 0; z-index: 9000;
       display: flex; flex-direction: column;
@@ -78,21 +50,23 @@
       42%    { transform:scale(1.12); }
       70%    { transform:scale(1); }
     }
+
     #landing h1 {
-      font-family: var(--FONT_JUDUL);
+      font-family: var(--FONT_JUDUL, cursive);
       font-size: clamp(2.4rem,7vw,4.5rem);
       color: var(--blush);
       text-shadow: 0 0 40px #c0392b88;
       margin-bottom: 1rem;
     }
     #landing p {
-      font-family: var(--FONT_ISI);
+      font-family: var(--FONT_ISI, serif);
       font-size: clamp(1rem,3vw,1.4rem);
       color: #e8b4c8; margin-bottom: 2.5rem;
       line-height: 1.8; max-width: 500px;
     }
+
     .btn-enter {
-      font-family: var(--FONT_JUDUL);
+      font-family: var(--FONT_JUDUL, cursive);
       font-size: 1.4rem; padding: .85rem 3rem;
       border: 2px solid var(--rose); background: transparent;
       color: var(--blush); border-radius: 50px; cursor: pointer;
@@ -107,9 +81,7 @@
     .btn-enter:hover::before { transform:scaleX(1); }
     .btn-enter:hover { color:#fff; box-shadow:0 0 30px #c0392b88; }
 
-    /* ══════════════════════════════════
-       MAIN SITE
-    ══════════════════════════════════ */
+    /* MAIN SITE */
     #main-site { display:none; position:relative; }
     #main-site.show { display:block; }
 
@@ -120,6 +92,7 @@
       background-attachment:fixed; opacity:.18; z-index:-1; pointer-events:none;
     }
 
+    /* DAUN GUGUR */
     .leaf-side {
       position:fixed; top:0; bottom:0; width:90px;
       pointer-events:none; z-index:500; overflow:hidden;
@@ -132,11 +105,12 @@
       filter:drop-shadow(0 0 4px #c0392b55);
     }
     @keyframes fall {
-      0%   { transform:translateY(0) rotate(0deg) translateX(0); opacity:.9; }
-      50%  { transform:translateY(50vh) rotate(180deg) translateX(25px); }
-      100% { transform:translateY(110vh) rotate(360deg) translateX(-10px); opacity:0; }
+      0%  { transform:translateY(0) rotate(0deg) translateX(0); opacity:.9; }
+      50% { transform:translateY(50vh) rotate(180deg) translateX(25px); }
+      100%{ transform:translateY(110vh) rotate(360deg) translateX(-10px); opacity:0; }
     }
 
+    /* SECTION */
     section {
       min-height:100vh; display:flex; flex-direction:column;
       align-items:center; justify-content:center;
@@ -167,7 +141,7 @@
     @keyframes scanline{ from{background-position:0 0;} to{background-position:0 100px;} }
 
     .dimension-title {
-      font-family:var(--FONT_AKSEN);
+      font-family: var(--FONT_AKSEN, serif);
       font-size:clamp(2rem,6vw,4rem); font-style:italic; letter-spacing:.12em;
       color:var(--blush); text-shadow:0 0 60px #ff006688,0 0 120px #ff006644;
       animation:glitch 6s infinite; text-align:center; margin-bottom:2rem;
@@ -178,6 +152,7 @@
       97%{ text-shadow:-4px 0 #00ffff88,4px 0 #ff006688; clip-path:polygon(0 60%,100% 60%,100% 80%,0 80%); }
       98%{ clip-path:none; }
     }
+
     .dimension-box {
       max-width:680px; text-align:center;
       border:1px solid rgba(192,57,91,.4);
@@ -188,7 +163,7 @@
     }
     @keyframes floatY{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
     .dimension-box p {
-      font-family:var(--FONT_ISI);
+      font-family: var(--FONT_ISI, serif);
       font-size:clamp(1rem,2.5vw,1.3rem); line-height:2; color:#f5d0e0; font-style:italic;
     }
 
@@ -197,7 +172,7 @@
     #foto2 .bg-cover { background-image:url('background foto2.jpg'); }
 
     .foto-title {
-      font-family:var(--FONT_JUDUL);
+      font-family: var(--FONT_JUDUL, cursive);
       font-size:clamp(2rem,5vw,3.2rem); color:var(--gold);
       text-shadow:0 2px 20px rgba(201,169,110,.5);
       margin-bottom:2rem; text-align:center;
@@ -216,7 +191,7 @@
       display:flex; align-items:center; justify-content:center; font-size:4rem;
     }
     .foto-caption {
-      font-family:var(--FONT_ISI);
+      font-family: var(--FONT_ISI, serif);
       padding:1.4rem 1.8rem; background:rgba(20,5,10,.8);
       font-size:1.05rem; line-height:1.9; color:#f0d0dc; font-style:italic;
       text-align:center; border-top:1px solid rgba(201,169,110,.2);
@@ -236,11 +211,11 @@
     }
     .pesan-box.visible { transform:translateY(0); opacity:1; }
     .pesan-box h2 {
-      font-family:var(--FONT_JUDUL);
+      font-family: var(--FONT_JUDUL, cursive);
       font-size:clamp(1.8rem,5vw,2.8rem); color:var(--rose-soft); margin-bottom:1.5rem;
     }
     .pesan-box p {
-      font-family:var(--FONT_ISI);
+      font-family: var(--FONT_ISI, serif);
       font-size:clamp(1rem,2.5vw,1.25rem); line-height:2.1; color:#f0d0dc; font-style:italic;
     }
 
@@ -254,13 +229,14 @@
     @keyframes hoverEnv{ 0%,100%{transform:translateY(0) rotate(-3deg);} 50%{transform:translateY(-12px) rotate(3deg);} }
     .surat-envelope:hover { filter:drop-shadow(0 0 40px #c0392b); }
     .surat-hint {
-      font-family:var(--FONT_ISI); font-style:italic; font-size:1.1rem;
+      font-family: var(--FONT_ISI, serif);
+      font-style:italic; font-size:1.1rem;
       color:var(--blush); text-align:center; margin-bottom:2rem;
       animation:pulseT 2s ease-in-out infinite;
     }
     @keyframes pulseT{ 0%,100%{opacity:1;} 50%{opacity:.5;} }
 
-    /* MODAL SURAT */
+    /* MODAL */
     #modal-surat {
       display:none; position:fixed; inset:0; z-index:8000;
       align-items:center; justify-content:center; padding:1.5rem;
@@ -284,14 +260,14 @@
       position:relative; padding:3rem 2.5rem;
       background:rgba(10,0,5,.65); backdrop-filter:blur(4px); text-align:center;
     }
-    .surat-inner h3 { font-family:var(--FONT_JUDUL); font-size:2rem; color:var(--gold); margin-bottom:1.5rem; }
-    .surat-inner p  { font-family:var(--FONT_ISI); font-size:1.1rem; line-height:2; color:#f5d0e0; font-style:italic; margin-bottom:1rem; }
-    .surat-nama     { font-family:var(--FONT_JUDUL); font-size:1.4rem; color:var(--rose-soft); margin-top:1rem; }
+    .surat-inner h3 { font-family:var(--FONT_JUDUL,cursive); font-size:2rem; color:var(--gold); margin-bottom:1.5rem; }
+    .surat-inner p  { font-family:var(--FONT_ISI,serif); font-size:1.1rem; line-height:2; color:#f5d0e0; font-style:italic; margin-bottom:1rem; }
+    .surat-nama     { font-family:var(--FONT_JUDUL,cursive); font-size:1.4rem; color:var(--rose-soft); margin-top:1rem; }
     .btn-tutup {
       margin-top:1.5rem; padding:.7rem 2.5rem;
       border:1px solid var(--rose-soft); background:transparent;
       color:var(--blush); border-radius:50px; cursor:pointer;
-      font-family:var(--FONT_JUDUL); font-size:1.2rem; transition:all .3s ease;
+      font-family:var(--FONT_JUDUL,cursive); font-size:1.2rem; transition:all .3s ease;
     }
     .btn-tutup:hover { background:var(--rose); color:#fff; }
 
@@ -307,9 +283,9 @@
       background:rgba(10,0,5,.6); backdrop-filter:blur(8px);
       margin-bottom:2.5rem; animation:floatY 6s ease-in-out infinite;
     }
-    .penutup-box p { font-family:var(--FONT_ISI); font-size:1.15rem; line-height:2; color:#f5d0e0; font-style:italic; }
+    .penutup-box p { font-family:var(--FONT_ISI,serif); font-size:1.15rem; line-height:2; color:#f5d0e0; font-style:italic; }
     .btn-close-site {
-      font-family:var(--FONT_JUDUL); font-size:1.3rem; padding:.9rem 3rem;
+      font-family:var(--FONT_JUDUL,cursive); font-size:1.3rem; padding:.9rem 3rem;
       border:2px solid var(--gold); background:transparent; color:var(--gold);
       border-radius:50px; cursor:pointer; transition:all .4s ease;
       position:relative; overflow:hidden;
@@ -331,7 +307,7 @@
     #tree-canvas { position:absolute; inset:0; pointer-events:none; }
     .gugur-texts { position:relative; z-index:2; display:flex; flex-direction:column; gap:1.8rem; }
     .gugur-line {
-      font-family:var(--FONT_JUDUL); color:var(--blush);
+      font-family:var(--FONT_JUDUL,cursive); color:var(--blush);
       text-shadow:0 0 30px #c0392b88;
       opacity:0; transform:translateY(20px);
       transition:opacity .8s ease,transform .8s ease;
@@ -339,7 +315,7 @@
     .gugur-line:nth-child(1){ font-size:clamp(1.8rem,5vw,3rem); }
     .gugur-line:nth-child(2){ font-size:clamp(1.2rem,3vw,2rem); }
     .gugur-line:nth-child(3){ font-size:clamp(1rem,2.5vw,1.6rem); color:var(--gold); }
-    .gugur-line:nth-child(4){ font-family:var(--FONT_ISI); font-size:clamp(1rem,2.5vw,1.4rem); font-style:italic; }
+    .gugur-line:nth-child(4){ font-family:var(--FONT_ISI,serif); font-size:clamp(1rem,2.5vw,1.4rem); font-style:italic; }
     .gugur-line.show { opacity:1; transform:translateY(0); }
 
     [data-reveal] { opacity:0; transform:translateY(40px); transition:opacity .9s ease,transform .9s ease; }
@@ -348,7 +324,6 @@
     @media(max-width:600px){
       .dimension-box,.pesan-box,.surat-inner{ padding:2rem 1.3rem; }
       .leaf-side{ width:50px; }
-      #font-panel{ width:calc(100vw - 48px); right:24px; }
     }
   </style>
 </head>
@@ -356,27 +331,26 @@
 
 <audio id="bg-audio" loop><source src="lagu.mp3" type="audio/mpeg"/></audio>
 
-
-<!-- ══ LANDING ══ -->
+<!-- LANDING -->
 <div id="landing">
   <div class="heart-anim">❤️</div>
   <h1>UNTUK NAURA SPECIAL</h1>
-  <p>Ada sesuatu yang ingin aku sampaikan beb ,<br/>ini isi hati aku sendiri.</p>
+  <p>Ada sesuatu yang ingin aku sampaikan beb,<br/>dari ini isi hatiku.</p>
   <button class="btn-enter" onclick="enterSite()">✦ Buka Pesan ✦</button>
 </div>
 
-<!-- ══ MAIN SITE ══ -->
+<!-- MAIN SITE -->
 <div id="main-site">
   <div class="leaf-side left"  id="leaf-left"></div>
   <div class="leaf-side right" id="leaf-right"></div>
 
   <section id="pembuka">
     <div class="bg-cover"></div>
-    <div class="dimension-title" data-reveal>✦ untuk mu  ✦</div>
+    <div class="dimension-title" data-reveal>✦ untuk mu ✦</div>
     <div class="dimension-box" data-reveal>
-      <p>hmmm maaf ya beb akhir2 ini aku jarang cht kamu -
+      <p>mmm maaf ya beb akhir2 ini aku jarang cht kamu -
       aku tau kamu khawatir atau mau narah.<br/><br/>
-     tapi karena kamu masi punya hati yang baik jadi kamu masih maafin aku, kamu sempurna .</p>
+     tapi karena kamu masi punya hati yang baik jadi kamu masih maafin aku, kamu sempurna.</p>
     </div>
     <div class="divider"></div>
   </section>
@@ -387,7 +361,8 @@
     <div class="foto-card" id="foto-card-1">
       <img src="foto1.jpg" alt="Foto 1" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
       <div class="foto-placeholder" style="display:none">📸</div>
-      <div class="foto-caption">Aku tau menurut kamu ini foto biasa ,<br/>tapi menurut  pacar kamu ini adalah foto spesial buat aku yang ga bisa aku lupain,di foto ini kamu tuh cantikk banget sampai aku ga nyangka punya pacar secantik ini beb,aplagi kamu jarang makeup.</div>
+      <div class="foto-caption">Aku tau menurut kamu ini foto biasa. tapi menurut  pacar kamu ini adalah foto spesial buat aku yang ga bisa aku lupain<br/>di foto ini kamu tuh cantikk banget sampai aku ga nyangka punya pacar secantik ini beb,aplagi kamu jarang makeup.</div>
+    </div>
   </section>
 
   <section id="pesan-tengah">
@@ -397,25 +372,25 @@
       <div class="divider"></div>
       <p>akhir-akhir ini kamu suka telat makan dan sampai ga nyadar kalau kamu lagi sakit
       plis jangn begitu beb aku ga mau kamu sakit atau terluka.<br/><br/>
-      aku tau kamu ga mau makan kalau belum ngemil dimsum 
-      .</p>
+      aku tau kamu ga mau makan kalau belum ngemil dimsum .</p>
     </div>
   </section>
 
   <section id="foto2">
     <div class="bg-cover"></div>
-    <div class="foto-title" data-reveal>🌹 untuk foto ini......</div>
+    <div class="foto-title" data-reveal>🌹untuk foto ini......</div>
     <div class="foto-card" id="foto-card-2">
       <img src="foto2.jpg" alt="Foto 2" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
       <div class="foto-placeholder" style="display:none">🌹</div>
-      <div class="foto-caption">Ini foto yang kamu kirim untuk pertama kalinya ke aku dan saat itu aku seneng bangetttt sampai aku lihatin terus fotonyaaaaa,aku masih ga nyangka aj kenalan sama cewe secantik kamu terus jadi pacar aku lagi
-   </div>.</div> 
+      <div class="foto-caption">Ini foto yang kamu kirim untuk pertama kalinya ke aku dan saat itu aku seneng bangetttt sampai aku lihatin terus fotonyaaaaa,aku masih ga nyangka aj kenalan sama cewe secantik kamu,terus kamu jadi pacar aku lagi ganyangka aj
+.</div>
+    </div>
   </section>
 
   <section id="pesan-akhir">
     <div class="bg-cover"></div>
     <div class="pesan-box" id="pesan-box-2">
-      <h2>Hmm beb</h2>
+      <h2>Yang Ingin Aku Katakan</h2>
       <div class="divider"></div>
       <p>aku ga memiliki kata-kata yang indah beb buat di ucapin maaf ya 
         tapi aku beruntung punya kamuu.<br/><br/>
@@ -427,7 +402,7 @@
   <section id="surat-section">
     <div class="bg-cover"></div>
     <div data-reveal style="text-align:center">
-      <div class="dimension-title">✉️ Ada Surat Untukmu</div>
+      <div class="dimension-title">✉️ Ada Surat Untuk kamu beb</div>
       <span class="surat-envelope" onclick="bukaModal()">💌</span>
       <p class="surat-hint">— klik amplop untuk membuka —</p>
     </div>
@@ -438,28 +413,27 @@
     <div class="penutup-wrap" data-reveal>
       <div class="dimension-title">✦ Sebelum Kita Berpisah ✦</div>
       <div class="penutup-box">
-        <p>makasih ya sayng udah mau baca aku harap kamu paham 
-          <br/><br/>
-       beb sering jaga diri kamu baik-baik ya sayn,okeyy 💕</p>
+        <p>makasih ya sayng udah mau baca aku harap kamu paham .<br/><br/>
+        beb sering jaga diri kamu baik-baik ya sayn,okeyy? 💕</p>
       </div>
       <button class="btn-close-site" onclick="tutupSite()">✦ Tutup dengan Cinta ✦</button>
     </div>
   </section>
 </div>
 
-<!-- ══ MODAL SURAT ══ -->
+<!-- MODAL SURAT -->
 <div id="modal-surat">
   <div class="surat-content">
     <div class="surat-bg"></div>
     <div class="surat-inner">
       <h3>Surat Untuk kamu beb 💌</h3>
-      <p>Kenapa akhir ini kamu selalu nutupin msalah kamu dari mulai sakit,
+      <p> Kenapa akhir ini kamu selalu nutupin msalah kamu dari mulai sakit,
         yang katanya kamu di jepang tapi ga pernah tuh fotoin kalau kamu disana,
        so kenapa harus di tutupin kenapa kalau ada apaoun kamu ga cerita ke aku , 
         kalau kamu gini terus aku jadi merasa bukan pacar kamu . 
         Kalau kamu udah bosen sama aku bilang aj sayang aku ga akan marah dan aku terima semua itu💬
         aku masih belum yakin sama diri aku sendiri jadi jngn terlalu berharap sama aku ya sayangg takutnya kamu sakut hati aku ga mau kamu terluka seidkitpun karena
-        kamu itu sangatttt sepcial di mata akuuu thak you udah mau jadi pacar aku yaaa thk you LOVE U NAURA
+🌹</p>
       <div class="divider"></div>
       <div class="surat-nama">— Dengan sepenuh hati, yunda❤️</div>
       <button class="btn-tutup" onclick="tutupModal()">✕ Tutup Surat</button>
@@ -467,7 +441,7 @@
   </div>
 </div>
 
-<!-- ══ GUGUR OVERLAY ══ -->
+<!-- GUGUR OVERLAY -->
 <div id="gugur-overlay">
   <canvas id="tree-canvas"></canvas>
   <div class="gugur-texts">
@@ -479,36 +453,58 @@
 </div>
 
 <script>
-/* ══ FONT PICKER ══ */
-const FONT_FALLBACK = {
-  'Dancing Script':'cursive','Great Vibes':'cursive','Sacramento':'cursive',
-  'Parisienne':'cursive','Pinyon Script':'cursive','Satisfy':'cursive',
-  'Cormorant Garamond':'serif','Lora':'serif','EB Garamond':'serif',
-  'Libre Baskerville':'serif','Crimson Text':'serif','Playfair Display':'serif',
-  'Raleway':'sans-serif','Montserrat':'sans-serif','Josefin Sans':'sans-serif',
-};
+/* ============================================================
+   ✏️  PENGATURAN FONT — EDIT DI SINI SAJA
+   ============================================================
 
-function togglePanel() {
-  document.getElementById('font-panel').classList.toggle('open');
-}
+   FONT JUDUL  → dipakai di: judul besar, tombol, nama di surat
+   FONT ISI    → dipakai di: isi pesan, teks body, caption foto
+   FONT AKSEN  → dipakai di: efek dimensi pembuka & penutup
 
-function gantiFont(jenis, nama) {
-  const fallback = FONT_FALLBACK[nama] || 'serif';
-  const val = `'${nama}', ${fallback}`;
+   Pilihan font yang bisa langsung dipakai:
+   ┌─────────────────────┬──────────────────────────────────┐
+   │ FONT JUDUL          │ FONT ISI / AKSEN                 │
+   ├─────────────────────┼──────────────────────────────────┤
+   │ 'Dancing Script'    │ 'Cormorant Garamond'             │
+   │ 'Great Vibes'       │ 'Lora'                           │
+   │ 'Sacramento'        │ 'EB Garamond'                    │
+   │ 'Parisienne'        │ 'Libre Baskerville'              │
+   │ 'Pinyon Script'     │ 'Crimson Text'                   │
+   │ 'Satisfy'           │ 'Raleway'                        │
+   │                     │ 'Montserrat'                     │
+   │                     │ 'Josefin Sans'                   │
+   └─────────────────────┴──────────────────────────────────┘
 
-  if (jenis === 'judul') {
-    document.documentElement.style.setProperty('--FONT_JUDUL', val);
-    document.getElementById('prev-judul').style.fontFamily = val;
-  } else if (jenis === 'isi') {
-    document.documentElement.style.setProperty('--FONT_ISI', val);
-    document.getElementById('prev-isi').style.fontFamily = val;
-  } else {
-    document.documentElement.style.setProperty('--FONT_AKSEN', val);
-    document.getElementById('prev-aksen').style.fontFamily = val;
-  }
-}
+   Cara ganti: ubah nama font di dalam tanda kutip di bawah ini.
+   ============================================================ */
 
-/* ══ ENTER ══ */
+  const FONT_JUDUL = 'Dancing Script';   // ← ganti nama font judul di sini
+  const FONT_ISI   = 'Cormorant Garamond'; // ← ganti nama font isi di sini
+  const FONT_AKSEN = 'Playfair Display';  // ← ganti nama font aksen di sini
+
+/* ============================================================
+   JANGAN UBAH APAPUN DI BAWAH GARIS INI
+   ============================================================ */
+
+  // Load Google Fonts sesuai pilihan
+  (function() {
+    const fonts = [FONT_JUDUL, FONT_ISI, FONT_AKSEN]
+      .filter((v, i, a) => a.indexOf(v) === i)
+      .map(f => f.replace(/ /g, '+') + ':ital,wght@0,300;0,400;0,600;0,700;1,300;1,400')
+      .join('&family=');
+    const link = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.href = `https://fonts.googleapis.com/css2?family=${fonts}&display=swap`;
+    document.head.appendChild(link);
+
+    // Terapkan ke CSS variables
+    const r = document.documentElement.style;
+    r.setProperty('--FONT_JUDUL', `'${FONT_JUDUL}', cursive`);
+    r.setProperty('--FONT_ISI',   `'${FONT_ISI}', serif`);
+    r.setProperty('--FONT_AKSEN', `'${FONT_AKSEN}', serif`);
+  })();
+
+/* ── ENTER ── */
 function enterSite() {
   document.getElementById('landing').classList.add('hide');
   setTimeout(() => {
@@ -519,7 +515,7 @@ function enterSite() {
   }, 1200);
 }
 
-/* ══ LEAVES ══ */
+/* ── LEAVES ── */
 const EMOJIS = ['🍂','🍁','❤️','🌹','💕','💗','🌸'];
 function makeLeaf(side) {
   const el = document.createElement('span');
@@ -538,7 +534,7 @@ function spawnLeaves() {
   for(let i=0;i<14;i++){ makeLeaf(L); makeLeaf(R); }
 }
 
-/* ══ SCROLL REVEAL ══ */
+/* ── SCROLL REVEAL ── */
 function initScrollReveal() {
   const obs = new IntersectionObserver(e=>e.forEach(x=>{ if(x.isIntersecting) x.target.classList.add('visible'); }),{threshold:.15});
   document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
@@ -546,12 +542,12 @@ function initScrollReveal() {
   document.querySelectorAll('.foto-card,.pesan-box').forEach(el=>obs2.observe(el));
 }
 
-/* ══ MODAL ══ */
+/* ── MODAL ── */
 function bukaModal()  { document.getElementById('modal-surat').classList.add('open'); }
 function tutupModal() { document.getElementById('modal-surat').classList.remove('open'); }
 document.getElementById('modal-surat').addEventListener('click',function(e){ if(e.target===this) tutupModal(); });
 
-/* ══ TUTUP SITE ══ */
+/* ── TUTUP SITE ── */
 function tutupSite() {
   document.getElementById('gugur-overlay').classList.add('show');
   drawTree(); animateParticles();
@@ -596,9 +592,6 @@ function animateParticles() {
   })();
 }
 window.addEventListener('resize',()=>{ if(document.getElementById('gugur-overlay').classList.contains('show')) drawTree(); });
-
-  }
-});
 </script>
 </body>
 </html>
